@@ -1,5 +1,5 @@
 "use client";
-import { useState, useMemo } from "react";
+import { useState } from "react";
 import Image from "next/image";
 
 interface VideoInfo {
@@ -111,8 +111,6 @@ export default function Home() {
     if (size < 1024 * 1024) return `${(size / 1024).toFixed(1)} KB`;
     return `${(size / (1024 * 1024)).toFixed(1)} MB`;
   };
-
-  const videoId = useMemo(() => extractVideoId(url), [url]);
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen p-8 gap-8 bg-white dark:bg-gray-900 transition-colors">
