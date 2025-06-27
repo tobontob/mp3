@@ -1,5 +1,5 @@
 "use client";
-import { useState, useMemo } from "react";
+import { useState } from "react";
 import Image from "next/image";
 
 interface VideoInfo {
@@ -112,8 +112,6 @@ export default function Home() {
     return `${(size / (1024 * 1024)).toFixed(1)} MB`;
   };
 
-  const videoId = useMemo(() => extractVideoId(url), [url]);
-
   return (
     <div className="flex flex-col items-center justify-center min-h-screen p-8 gap-8 bg-white dark:bg-gray-900 transition-colors">
       <h1 className="text-3xl font-bold mb-4 text-center text-gray-900 dark:text-gray-100">유튜브 MP3 변환기</h1>
@@ -197,23 +195,23 @@ export default function Home() {
           </div>
 
           <div className="flex flex-col gap-3 mt-4">
-            <button onClick={() => window.open(`https://www.y2mate.com/youtube/${videoId}`, '_blank')} className="bg-green-500 text-white rounded px-4 py-2 font-semibold hover:bg-green-600 dark:hover:bg-green-400 transition">
+            <button onClick={() => window.open(`https://www.y2mate.com/youtube/`, '_blank')} className="bg-green-500 text-white rounded px-4 py-2 font-semibold hover:bg-green-600 dark:hover:bg-green-400 transition">
               y2mate (추천, 바로 변환)
             </button>
             <div className="text-sm text-gray-700 dark:text-gray-300 mt-1 mb-2 text-center font-semibold">
               y2mate에서 변환이 제대로 안된다면 다른 사이트를 이용해 보세요.
             </div>
             <div className="grid grid-cols-2 gap-3">
-              <button onClick={() => window.open(`https://ytmp3.nu/${videoId}/`, '_blank')} className="bg-blue-500 text-white rounded px-4 py-2 font-semibold hover:bg-blue-600 dark:hover:bg-blue-400 transition">
+              <button onClick={() => window.open(`https://ytmp3.nu/`, '_blank')} className="bg-blue-500 text-white rounded px-4 py-2 font-semibold hover:bg-blue-600 dark:hover:bg-blue-400 transition">
                 ytmp3
               </button>
-              <button onClick={() => window.open(`https://ytmp3.cc/${videoId}/`, '_blank')} className="bg-indigo-500 text-white rounded px-4 py-2 font-semibold hover:bg-indigo-600 dark:hover:bg-indigo-400 transition">
+              <button onClick={() => window.open(`https://ytmp3.cc/`, '_blank')} className="bg-indigo-500 text-white rounded px-4 py-2 font-semibold hover:bg-indigo-600 dark:hover:bg-indigo-400 transition">
                 ytmp3.cc
               </button>
-              <button onClick={() => window.open(`https://x2convert.com/en16/download-youtube-mp3/${videoId}`, '_blank')} className="bg-pink-500 text-white rounded px-4 py-2 font-semibold hover:bg-pink-600 dark:hover:bg-pink-400 transition">
+              <button onClick={() => window.open(`https://x2convert.com/`, '_blank')} className="bg-pink-500 text-white rounded px-4 py-2 font-semibold hover:bg-pink-600 dark:hover:bg-pink-400 transition">
                 x2convert
               </button>
-              <button onClick={() => window.open(`https://youtubemp3free.com/youtube/${videoId}`, '_blank')} className="bg-yellow-500 text-gray-900 rounded px-4 py-2 font-semibold hover:bg-yellow-400 dark:hover:bg-yellow-300 transition">
+              <button onClick={() => window.open(`https://youtubemp3free.com/`, '_blank')} className="bg-yellow-500 text-gray-900 rounded px-4 py-2 font-semibold hover:bg-yellow-400 dark:hover:bg-yellow-300 transition">
                 youtubemp3free
               </button>
             </div>
