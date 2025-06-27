@@ -1,0 +1,33 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+1.agent로 질문할때는 항상 수정 또는 코딩 제안만 하지 말고 바로 수정 및 코딩해주세요.
+2.해당 프로젝트는 vercel 외부서버로 배포할 프로젝트 인걸 명심하십시요.
+3.코딩할때 항상 vercel 배포를 고려하여 주시기 바랍니다.
+4.개발시 반응형 디자인으로 개발 되며, 모든 디자인 및 스타일 적용시 모바일기기에도 최적화된 디자인과 스타일을 적용해 주세요.
+
+
+
+
+기술적 분석
+1. 가능한 기술 스택
+Frontend: React, Next.js, Vue.js 등
+Backend: Node.js (Express), Python (Flask/FastAPI)
+배포: Vercel (Next.js 최적화), Netlify, Railway 등
+동영상 처리: ytdl-core, youtube-dl, pytube 등
+2. 주요 라이브러리 옵션
+Node.js 기반:
+ytdl-core: 유튜브 동영상 다운로드
+fluent-ffmpeg: 오디오 변환
+@ffmpeg/ffmpeg: WebAssembly 기반 FFmpeg
+Python 기반:
+yt-dlp: youtube-dl의 포크 (더 활발한 개발)
+pytube: 유튜브 다운로드
+moviepy: 비디오/오디오 처리
+3. 아키텍처 옵션
+클라이언트 사이드 처리
+
+
+대용량파일 처리 제한과 vercel의 실행시간 제한을 무료버전을 기준으로 준수하는 선에서 제작
